@@ -1,0 +1,92 @@
+{
+	"rulesDirectory": "node_modules/tslint-microsoft-contrib",
+	"extends": [
+		"tslint:latest",
+		"tslint-react",
+		"tslint-config-prettier",
+		"tslint-consistent-codestyle"
+	],
+	"rules": {
+		"quotemark": [
+			true,
+			"single",
+			"jsx-double",
+			"avoid-escape"
+		],
+		"semicolon": [
+			false,
+			"always",
+			"ignore-bound-class-methods"
+		],
+		"no-console": [
+			true,
+			"assert",
+			"count",
+			"debug",
+			"dir",
+			"error",
+			"group",
+			"groupCollapsed",
+			"groupEnd",
+			"info",
+			"log",
+			"profile",
+			"profileEnd",
+			"table",
+			"time",
+			"timeEnd",
+			"timeStamp",
+			"trace",
+			"warn"
+		],
+		"arrow-parens": [
+			true
+		],
+		"indent": [
+			true,
+			"spaces"
+		],
+		"ordered-imports": [
+			false
+		],
+		"no-empty-interface": false,
+		"object-literal-sort-keys": false,
+		"object-literal-key-quotes": false,
+		"jsx-boolean-value": [
+			true,
+			"never"
+		],
+		"jsx-no-multiline-js": [
+			false
+		],
+		"jsx-wrap-multiline": [
+			false
+		],
+		"jsx-no-lambda": [
+			false
+		],
+		"no-submodule-imports": false,
+		"no-implicit-dependencies": false,
+		"no-unused-variable": true,
+		"mocha-avoid-only": true,
+		"possible-timing-attack": true,
+		"react-iframe-missing-sandbox": true,
+		"naming-convention": [
+			true,
+			{
+				"type": "enum",
+				"prefix": "E",
+				"format": "PascalCase"
+			},
+			{
+				"type": "interface",
+				"prefix": "I",
+				"format": "PascalCase"
+			}
+		],
+		"react-anchor-blank-noopener": true,
+		"no-require-imports": true,
+		"no-floating-promises": true,
+		"no-parameter-reassignment": true
+	}
+}
