@@ -44,7 +44,7 @@ interface IHero {
 
 const HeroCardContainer = styled.div`
 	display: flex;
-	padding: 50px;
+	padding: 0 2%;
 	align-self: center;
 	max-width: 1150px;
 	@media (min-width: 1400px) {
