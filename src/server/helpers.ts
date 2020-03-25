@@ -1,6 +1,224 @@
 import { getRepository } from 'typeorm'
 import { Hero } from './entities/hero'
+import { Threat } from './entities/threat'
 import { TElement } from './types/element'
+
+const EYEORE = {
+  name: 'Eyeore',
+  imgUrl: 'http://localhost:8080/public/eyeore.jpg',
+  description: `
+    Using his swag and manipulation skills, dudeguy gains your trust, to get valuable personal information from you and missuse it.
+  `,
+  backStory: `
+    Porcu used to live a peaceful life. He lived in the Coral Reefs of the Vast Sea, right next to city of Delareum. But that wicked night changed everything. \n
+    City of Delareum was not too organized and it was lead by scoundrels and thugs. They had planned for some while now to steal the riches of Coral Reef, and during the night they came. \n
+    Porcu barely managed to get away, but he wasn't able to save his fiancé. Next day he went back to the Reefs to recover his suit from his hideout. \n
+    When he saw the destruction he vowed to have his revenge on his loved one and replenish world from evil.
+  `,
+  strength: 80,
+  intelligence: 60,
+  stamina: 100,
+  healthpoints: 800,
+  mana: 0,
+  agility: 20,
+  speed: 40,
+  resistance: 'Fire' as TElement,
+  weakness: 'Water' as TElement,
+  skills: [
+    {
+      name: 'Plasma beam',
+      damage: 200,
+      element: 'Plasma',
+      description: 'Hurls a beam of plasma from his central core.'
+    },
+    {
+      name: 'Sneaky punch',
+      damage: 25,
+      element: 'Physical',
+      description: 'Porcu spins right arm really fast as a decoy, then quickly punches with his left straight to the opponents face.'
+    }
+  ]
+}
+const SNEAKKO = {
+  name: 'Sneakko',
+  imgUrl: 'http://localhost:8080/public/sneakko.jpg',
+  description: `
+    Using his swag and manipulation skills, dudeguy gains your trust, to get valuable personal information from you and missuse it.
+  `,
+  backStory: `
+    Porcu used to live a peaceful life. He lived in the Coral Reefs of the Vast Sea, right next to city of Delareum. But that wicked night changed everything. \n
+    City of Delareum was not too organized and it was lead by scoundrels and thugs. They had planned for some while now to steal the riches of Coral Reef, and during the night they came. \n
+    Porcu barely managed to get away, but he wasn't able to save his fiancé. Next day he went back to the Reefs to recover his suit from his hideout. \n
+    When he saw the destruction he vowed to have his revenge on his loved one and replenish world from evil.
+  `,
+  strength: 80,
+  intelligence: 60,
+  stamina: 100,
+  healthpoints: 800,
+  mana: 0,
+  agility: 20,
+  speed: 40,
+  resistance: 'Fire' as TElement,
+  weakness: 'Water' as TElement,
+  skills: [
+    {
+      name: 'Plasma beam',
+      damage: 200,
+      element: 'Plasma',
+      description: 'Hurls a beam of plasma from his central core.'
+    },
+    {
+      name: 'Sneaky punch',
+      damage: 25,
+      element: 'Physical',
+      description: 'Porcu spins right arm really fast as a decoy, then quickly punches with his left straight to the opponents face.'
+    }
+  ]
+}
+const TRICKKERO = {
+  name: 'Trickkero',
+  imgUrl: 'http://localhost:8080/public/trickkero.jpg',
+  description: `
+    Using his swag and manipulation skills, dudeguy gains your trust, to get valuable personal information from you and missuse it.
+  `,
+  backStory: `
+    Porcu used to live a peaceful life. He lived in the Coral Reefs of the Vast Sea, right next to city of Delareum. But that wicked night changed everything. \n
+    City of Delareum was not too organized and it was lead by scoundrels and thugs. They had planned for some while now to steal the riches of Coral Reef, and during the night they came. \n
+    Porcu barely managed to get away, but he wasn't able to save his fiancé. Next day he went back to the Reefs to recover his suit from his hideout. \n
+    When he saw the destruction he vowed to have his revenge on his loved one and replenish world from evil.
+  `,
+  strength: 80,
+  intelligence: 60,
+  stamina: 100,
+  healthpoints: 800,
+  mana: 0,
+  agility: 20,
+  speed: 40,
+  resistance: 'Fire' as TElement,
+  weakness: 'Water' as TElement,
+  skills: [
+    {
+      name: 'Plasma beam',
+      damage: 200,
+      element: 'Plasma',
+      description: 'Hurls a beam of plasma from his central core.'
+    },
+    {
+      name: 'Sneaky punch',
+      damage: 25,
+      element: 'Physical',
+      description: 'Porcu spins right arm really fast as a decoy, then quickly punches with his left straight to the opponents face.'
+    }
+  ]
+}
+const TINY = {
+  name: 'Tiny',
+  imgUrl: 'http://localhost:8080/public/tiny.jpg',
+  description: `
+    Using his swag and manipulation skills, dudeguy gains your trust, to get valuable personal information from you and missuse it.
+  `,
+  backStory: `
+    Porcu used to live a peaceful life. He lived in the Coral Reefs of the Vast Sea, right next to city of Delareum. But that wicked night changed everything. \n
+    City of Delareum was not too organized and it was lead by scoundrels and thugs. They had planned for some while now to steal the riches of Coral Reef, and during the night they came. \n
+    Porcu barely managed to get away, but he wasn't able to save his fiancé. Next day he went back to the Reefs to recover his suit from his hideout. \n
+    When he saw the destruction he vowed to have his revenge on his loved one and replenish world from evil.
+  `,
+  strength: 80,
+  intelligence: 60,
+  stamina: 100,
+  healthpoints: 800,
+  mana: 0,
+  agility: 20,
+  speed: 40,
+  resistance: 'Fire' as TElement,
+  weakness: 'Water' as TElement,
+  skills: [
+    {
+      name: 'Plasma beam',
+      damage: 200,
+      element: 'Plasma',
+      description: 'Hurls a beam of plasma from his central core.'
+    },
+    {
+      name: 'Sneaky punch',
+      damage: 25,
+      element: 'Physical',
+      description: 'Porcu spins right arm really fast as a decoy, then quickly punches with his left straight to the opponents face.'
+    }
+  ]
+}
+const OVERLORDS = {
+  name: 'Overlords',
+  imgUrl: 'http://localhost:8080/public/overlords.jpg',
+  description: `
+    Using his swag and manipulation skills, dudeguy gains your trust, to get valuable personal information from you and missuse it.
+  `,
+  backStory: `
+    Porcu used to live a peaceful life. He lived in the Coral Reefs of the Vast Sea, right next to city of Delareum. But that wicked night changed everything. \n
+    City of Delareum was not too organized and it was lead by scoundrels and thugs. They had planned for some while now to steal the riches of Coral Reef, and during the night they came. \n
+    Porcu barely managed to get away, but he wasn't able to save his fiancé. Next day he went back to the Reefs to recover his suit from his hideout. \n
+    When he saw the destruction he vowed to have his revenge on his loved one and replenish world from evil.
+  `,
+  strength: 80,
+  intelligence: 60,
+  stamina: 100,
+  healthpoints: 800,
+  mana: 0,
+  agility: 20,
+  speed: 40,
+  resistance: 'Fire' as TElement,
+  weakness: 'Water' as TElement,
+  skills: [
+    {
+      name: 'Plasma beam',
+      damage: 200,
+      element: 'Plasma',
+      description: 'Hurls a beam of plasma from his central core.'
+    },
+    {
+      name: 'Sneaky punch',
+      damage: 25,
+      element: 'Physical',
+      description: 'Porcu spins right arm really fast as a decoy, then quickly punches with his left straight to the opponents face.'
+    }
+  ]
+}
+const DUDEGUY = {
+  name: 'Dudeguy',
+  imgUrl: 'http://localhost:8080/public/dudeguy.jpg',
+  description: `
+    Using his swag and manipulation skills, dudeguy gains your trust, to get valuable personal information from you and missuse it.
+  `,
+  backStory: `
+    Porcu used to live a peaceful life. He lived in the Coral Reefs of the Vast Sea, right next to city of Delareum. But that wicked night changed everything. \n
+    City of Delareum was not too organized and it was lead by scoundrels and thugs. They had planned for some while now to steal the riches of Coral Reef, and during the night they came. \n
+    Porcu barely managed to get away, but he wasn't able to save his fiancé. Next day he went back to the Reefs to recover his suit from his hideout. \n
+    When he saw the destruction he vowed to have his revenge on his loved one and replenish world from evil.
+  `,
+  strength: 80,
+  intelligence: 60,
+  stamina: 100,
+  healthpoints: 800,
+  mana: 0,
+  agility: 20,
+  speed: 40,
+  resistance: 'Fire' as TElement,
+  weakness: 'Water' as TElement,
+  skills: [
+    {
+      name: 'Plasma beam',
+      damage: 200,
+      element: 'Plasma',
+      description: 'Hurls a beam of plasma from his central core.'
+    },
+    {
+      name: 'Sneaky punch',
+      damage: 25,
+      element: 'Physical',
+      description: 'Porcu spins right arm really fast as a decoy, then quickly punches with his left straight to the opponents face.'
+    }
+  ]
+}
 
 const PORCU = {
   name: 'Porcu',
@@ -120,10 +338,13 @@ const GIDEON = {
 
 export const seedDatabase = async () => {
   const heroRepository = getRepository(Hero)
+  const threatRepository = getRepository(Threat)
 
   const heroes = heroRepository.create([PORCU, LISA, GIDEON])
+  const threat = threatRepository.create([DUDEGUY, EYEORE, OVERLORDS, SNEAKKO, TINY, TRICKKERO])
 
   await heroRepository.save(heroes)
+  await heroRepository.save(threat)
 }
 
 export type Lazy<T extends object> = Promise<T> | T

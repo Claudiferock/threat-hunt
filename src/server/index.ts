@@ -6,8 +6,10 @@ import { ApolloServer } from 'apollo-server'
 import * as TypeGraphQl from 'type-graphql'
 
 import { Hero } from './entities/hero'
+import { Threat } from './entities/threat'
 import { Skill } from './entities/skill'
 import { HeroResolver } from './resolvers/hero-resolver'
+import { ThreatResolver } from './resolvers/threat-resolver'
 
 import { seedDatabase } from './helpers'
 
@@ -17,7 +19,7 @@ useContainer(Container)
 const databaseOptions: ConnectionOptions = {
   type: 'sqlite',
   database: `${path.resolve(__dirname, ".")}/data/db.sqlite`,
-  entities: [Hero, Skill],
+  entities: [Hero, Threat, Skill],
   logging: false, // switch to 'all' or true to enable database query logging
 }
 
@@ -30,7 +32,7 @@ const bootstrapApp = async () => {
     await seedDatabase()
 
     const schema = await TypeGraphQl.buildSchema({
-      resolvers: [HeroResolver],
+      resolvers: [HeroResolver, ThreatResolver],
       container: Container,
     })
 

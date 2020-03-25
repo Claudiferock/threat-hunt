@@ -8,6 +8,8 @@ import { Hero } from '../../components/Hero';
 import { Section } from '../../components/Section';
 import { Footer } from '../../components/Footer';
 import { HeroCard } from '../../components/HeroCard';
+import { ThreatCard } from '../../components/ThreatCard';
+import { Threat } from 'src/server/entities/threat';
 
 const HEROES_QUERY = gql`
 	query {
@@ -41,6 +43,38 @@ interface IHero {
   imgUrl: string;
   // extend this to match query above
 }
+const THREATS_QUERY = gql`
+	query {
+		threat {
+			name
+			imgUrl
+			description
+			backStory
+			strength
+			intelligence
+			stamina
+			healthpoints
+			mana
+			agility
+			speed
+			resistance
+			weakness
+			skills {
+				name
+				damage
+				element
+			}
+		}
+	}
+`;
+
+interface IThreatIndexProps {}
+
+interface IThreat {
+  name: string;
+  imgUrl: string;
+  // extend this to match query above
+}
 
 const HeroCardContainer = styled.div`
 	display: flex;
@@ -63,6 +97,11 @@ export const HeroIndex: React.FC<IHeroIndexProps> = () => {
 		error,
 		loading,
 	} = useQuery<{ heroes: IHero[] }>(HEROES_QUERY);
+	
+/* 	const {
+		data: { threats },
+
+	} = useQuery<{ threats: IThreat[] }>(THREATS_QUERY); */
 
 	if (error) {
 		return handleError(error.message);
@@ -73,6 +112,7 @@ export const HeroIndex: React.FC<IHeroIndexProps> = () => {
 	}
 
 	console.log(heroes);
+/* 	console.log(threats); */
 
 	return (
 		<main>
@@ -81,12 +121,12 @@ export const HeroIndex: React.FC<IHeroIndexProps> = () => {
 			<Section
 				heading={'Hunter Index'}
 				paragraph={`
-          Professor Hoax gave us this Hunter Index -tool 
-          so we can see how our heroes manage against evildoers. 
-          Unfortunately he forgot to implement their HeroCards. 
-          It's your job to finish his work before we can continue
-          on our journey together!
-        `}
+        		  Professor Hoax gave us this Hunter Index -tool 
+        		  so we can see how our heroes manage against evildoers. 
+        		  Unfortunately he forgot to implement their HeroCards. 
+        		  It's your job to finish his work before we can continue
+        		  on our journey together!
+        		`}
 			/>
 
 			{/** Improve this section. Data provided is defined on top in GraphQL query. You can decide what you use and what you dont't.*/}
@@ -95,6 +135,21 @@ export const HeroIndex: React.FC<IHeroIndexProps> = () => {
 					<HeroCard key={hero.name} {...hero} />
 				))}
 			</HeroCardContainer>
+
+			<Section
+				heading={'Defeat the threats'}
+				paragraph={`
+        		  Professor Hoax and our heroes need your help. 
+        		  To defeat the Cybersecurity threats lurking around us,
+        		  let's do this together!
+        		`}
+			/>
+
+{/* 			<HeroCardContainer>
+				{threats.map(threat => (
+					<ThreatCard key={threat.name} {...threat} />
+				))}
+			</HeroCardContainer> */}
 
 			<Footer />
 		</main>
