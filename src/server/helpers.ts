@@ -338,12 +338,13 @@ const GIDEON = {
 
 export const seedDatabase = async () => {
   const heroRepository = getRepository(Hero)
-  const threatRepository = getRepository(Threat)
-
+  
   const heroes = heroRepository.create([PORCU, LISA, GIDEON])
-  const threat = threatRepository.create([DUDEGUY, EYEORE, OVERLORDS, SNEAKKO, TINY, TRICKKERO])
-
+  
   await heroRepository.save(heroes)
+  
+  const threatRepository = getRepository(Threat)
+  const threat = threatRepository.create([DUDEGUY, EYEORE, OVERLORDS, SNEAKKO, TINY, TRICKKERO])
   await heroRepository.save(threat)
 }
 

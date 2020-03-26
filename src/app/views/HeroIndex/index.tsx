@@ -8,8 +8,7 @@ import { Hero } from '../../components/Hero';
 import { Section } from '../../components/Section';
 import { Footer } from '../../components/Footer';
 import { HeroCard } from '../../components/HeroCard';
-import { ThreatCard } from '../../components/ThreatCard';
-import { Threat } from 'src/server/entities/threat';
+import { ThreatIndex } from '../ThreatIndex/index';
 
 const HEROES_QUERY = gql`
 	query {
@@ -43,38 +42,6 @@ interface IHero {
   imgUrl: string;
   // extend this to match query above
 }
-const THREATS_QUERY = gql`
-	query {
-		threat {
-			name
-			imgUrl
-			description
-			backStory
-			strength
-			intelligence
-			stamina
-			healthpoints
-			mana
-			agility
-			speed
-			resistance
-			weakness
-			skills {
-				name
-				damage
-				element
-			}
-		}
-	}
-`;
-
-interface IThreatIndexProps {}
-
-interface IThreat {
-  name: string;
-  imgUrl: string;
-  // extend this to match query above
-}
 
 const HeroCardContainer = styled.div`
 	display: flex;
@@ -97,11 +64,6 @@ export const HeroIndex: React.FC<IHeroIndexProps> = () => {
 		error,
 		loading,
 	} = useQuery<{ heroes: IHero[] }>(HEROES_QUERY);
-	
-/* 	const {
-		data: { threats },
-
-	} = useQuery<{ threats: IThreat[] }>(THREATS_QUERY); */
 
 	if (error) {
 		return handleError(error.message);
@@ -144,6 +106,8 @@ export const HeroIndex: React.FC<IHeroIndexProps> = () => {
         		  let's do this together!
         		`}
 			/>
+
+			{/* <ThreatIndex/> */}
 
 {/* 			<HeroCardContainer>
 				{threats.map(threat => (
