@@ -7,13 +7,13 @@ const EYEORE = {
   name: 'Eyeore',
   imgUrl: 'http://localhost:8080/public/eyeore.jpg',
   description: `
-    Using his swag and manipulation skills, dudeguy gains your trust, to get valuable personal information from you and missuse it.
+    These little creatures have one mission in life... plain and simple, spying on you.
   `,
   backStory: `
-    Porcu used to live a peaceful life. He lived in the Coral Reefs of the Vast Sea, right next to city of Delareum. But that wicked night changed everything. \n
-    City of Delareum was not too organized and it was lead by scoundrels and thugs. They had planned for some while now to steal the riches of Coral Reef, and during the night they came. \n
-    Porcu barely managed to get away, but he wasn't able to save his fiancé. Next day he went back to the Reefs to recover his suit from his hideout. \n
-    When he saw the destruction he vowed to have his revenge on his loved one and replenish world from evil.
+    These Eyeores are the result of intense unethical gene manipulation and experimentation by a secret organization we still don't know about. \n
+    They have been found well hidden attached to IoT devices and for some reason they are easy to miss, but absolutely noticeable once you learn to recognise  \n
+    . \n
+    .
   `,
   strength: 80,
   intelligence: 60,
@@ -46,10 +46,10 @@ const SNEAKKO = {
     Using his swag and manipulation skills, dudeguy gains your trust, to get valuable personal information from you and missuse it.
   `,
   backStory: `
-    Porcu used to live a peaceful life. He lived in the Coral Reefs of the Vast Sea, right next to city of Delareum. But that wicked night changed everything. \n
-    City of Delareum was not too organized and it was lead by scoundrels and thugs. They had planned for some while now to steal the riches of Coral Reef, and during the night they came. \n
-    Porcu barely managed to get away, but he wasn't able to save his fiancé. Next day he went back to the Reefs to recover his suit from his hideout. \n
-    When he saw the destruction he vowed to have his revenge on his loved one and replenish world from evil.
+    . \n
+    . \n
+    . \n
+    .
   `,
   strength: 80,
   intelligence: 60,
@@ -79,13 +79,13 @@ const TRICKKERO = {
   name: 'Trickkero',
   imgUrl: 'http://localhost:8080/public/trickkero.jpg',
   description: `
-    Using his swag and manipulation skills, dudeguy gains your trust, to get valuable personal information from you and missuse it.
+    .
   `,
   backStory: `
-    Porcu used to live a peaceful life. He lived in the Coral Reefs of the Vast Sea, right next to city of Delareum. But that wicked night changed everything. \n
-    City of Delareum was not too organized and it was lead by scoundrels and thugs. They had planned for some while now to steal the riches of Coral Reef, and during the night they came. \n
-    Porcu barely managed to get away, but he wasn't able to save his fiancé. Next day he went back to the Reefs to recover his suit from his hideout. \n
-    When he saw the destruction he vowed to have his revenge on his loved one and replenish world from evil.
+    . \n
+    . \n
+    . \n
+    .
   `,
   strength: 80,
   intelligence: 60,
@@ -118,10 +118,10 @@ const TINY = {
     Using his swag and manipulation skills, dudeguy gains your trust, to get valuable personal information from you and missuse it.
   `,
   backStory: `
-    Porcu used to live a peaceful life. He lived in the Coral Reefs of the Vast Sea, right next to city of Delareum. But that wicked night changed everything. \n
-    City of Delareum was not too organized and it was lead by scoundrels and thugs. They had planned for some while now to steal the riches of Coral Reef, and during the night they came. \n
-    Porcu barely managed to get away, but he wasn't able to save his fiancé. Next day he went back to the Reefs to recover his suit from his hideout. \n
-    When he saw the destruction he vowed to have his revenge on his loved one and replenish world from evil.
+    . \n
+    . \n
+    . \n
+    .
   `,
   strength: 80,
   intelligence: 60,
@@ -154,10 +154,10 @@ const OVERLORDS = {
     Using his swag and manipulation skills, dudeguy gains your trust, to get valuable personal information from you and missuse it.
   `,
   backStory: `
-    Porcu used to live a peaceful life. He lived in the Coral Reefs of the Vast Sea, right next to city of Delareum. But that wicked night changed everything. \n
-    City of Delareum was not too organized and it was lead by scoundrels and thugs. They had planned for some while now to steal the riches of Coral Reef, and during the night they came. \n
-    Porcu barely managed to get away, but he wasn't able to save his fiancé. Next day he went back to the Reefs to recover his suit from his hideout. \n
-    When he saw the destruction he vowed to have his revenge on his loved one and replenish world from evil.
+    . \n
+    . \n
+    . \n
+    .
   `,
   strength: 80,
   intelligence: 60,
@@ -190,10 +190,10 @@ const DUDEGUY = {
     Using his swag and manipulation skills, dudeguy gains your trust, to get valuable personal information from you and missuse it.
   `,
   backStory: `
-    Porcu used to live a peaceful life. He lived in the Coral Reefs of the Vast Sea, right next to city of Delareum. But that wicked night changed everything. \n
-    City of Delareum was not too organized and it was lead by scoundrels and thugs. They had planned for some while now to steal the riches of Coral Reef, and during the night they came. \n
-    Porcu barely managed to get away, but he wasn't able to save his fiancé. Next day he went back to the Reefs to recover his suit from his hideout. \n
-    When he saw the destruction he vowed to have his revenge on his loved one and replenish world from evil.
+    . \n
+    . \n
+    . \n
+    .
   `,
   strength: 80,
   intelligence: 60,
