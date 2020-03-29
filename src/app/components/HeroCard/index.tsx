@@ -25,6 +25,11 @@ h2 {
 }
 img {
   height: 160px;
+  -webkit-filter: grayscale(.8);
+  &:hover {
+    -webkit-filter: grayscale(0);
+    transition: all 200ms; 
+    }
 }
 `;
 

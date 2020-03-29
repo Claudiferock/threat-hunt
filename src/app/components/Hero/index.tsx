@@ -21,7 +21,25 @@ const Image = styled.div`
 	@media (max-width: 768px) {
 		max-height: 500px;
 		min-height: 500px;
-  }
+	}
+	animation: filter-animation 250ms 3;
+	@keyframes filter-animation {
+		0% {
+			-webkit-filter: saturate(2);
+		}
+		25% {
+			-webkit-filter: hue-rotate(90deg) saturate(1);
+		}
+		50% {
+			-webkit-filter: sepia(1) saturate(8) invert(.4);
+		}
+		75% {
+			-webkit-filter: invert(.4);
+		}
+		100% {
+			-webkit-filter: sepia(0) saturate(2);
+		}
+	}  
 `
 
 const Logo = styled.img`
