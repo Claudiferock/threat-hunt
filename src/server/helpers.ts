@@ -336,16 +336,23 @@ const GIDEON = {
   ]
 }
 
-export const seedDatabase = async () => {
+const seedHeroRepo = async () => {
   const heroRepository = getRepository(Hero)
   
   const heroes = heroRepository.create([PORCU, LISA, GIDEON])
   
   await heroRepository.save(heroes)
-  
+}
+
+const seedThreatRepo = async () => {
   const threatRepository = getRepository(Threat)
   const threat = threatRepository.create([DUDEGUY, EYEORE, OVERLORDS, SNEAKKO, TINY, TRICKKERO])
-  await heroRepository.save(threat)
+  await threatRepository.save(threat)
+}
+
+export const seedDatabase = () => {
+  seedHeroRepo();
+  seedThreatRepo();
 }
 
 export type Lazy<T extends object> = Promise<T> | T
