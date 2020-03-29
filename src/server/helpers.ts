@@ -7,35 +7,35 @@ const EYEORE = {
   name: 'Eyeore',
   imgUrl: 'http://localhost:8080/public/eyeore.jpg',
   description: `
-    These little creatures have one mission in life... plain and simple, spying on you.
+    These little creature's only mission in life is to take control over your IoT devices.
   `,
   backStory: `
     These Eyeores are the result of intense unethical gene manipulation and experimentation by a secret organization we still don't know about. \n
-    They have been found well hidden attached to IoT devices and for some reason they are easy to miss, but absolutely noticeable once you learn to recognise  \n
-    . \n
+    They have been found well hidden, attached to IoT devices. \n
+    For some reason they are easy to miss, but absolutely noticeable once you learn to recognise them. \n
     .
   `,
-  strength: 80,
-  intelligence: 60,
-  stamina: 100,
-  healthpoints: 800,
-  mana: 0,
+  strength: 10,
+  intelligence: 20,
+  stamina: 200,
+  healthpoints: 40,
+  mana: 200,
   agility: 20,
   speed: 40,
   resistance: 'Fire' as TElement,
   weakness: 'Water' as TElement,
   skills: [
     {
-      name: 'Plasma beam',
-      damage: 200,
-      element: 'Plasma',
-      description: 'Hurls a beam of plasma from his central core.'
+      name: 'Snoopy snoopy do',
+      damage: 20,
+      element: 'Psychic',
+      description: 'Eyeore got access to your IoT device and now its sending your data to cibercriminals :('
     },
     {
-      name: 'Sneaky punch',
-      damage: 25,
+      name: 'hijacked time DDoS',
+      damage: 60,
       element: 'Physical',
-      description: 'Porcu spins right arm really fast as a decoy, then quickly punches with his left straight to the opponents face.'
+      description: 'Oh no! now your IoT deviced got hijacked, to be part of a DDoS attack!'
     }
   ]
 }
@@ -43,18 +43,18 @@ const SNEAKKO = {
   name: 'Sneakko',
   imgUrl: 'http://localhost:8080/public/sneakko.jpg',
   description: `
-    Using his swag and manipulation skills, dudeguy gains your trust, to get valuable personal information from you and missuse it.
+    This devil fella sneaks into your devices and lurks there till it finds sensitive information to take advantage off.
   `,
   backStory: `
-    . \n
-    . \n
-    . \n
+    Nobody really knows where it comes from, but one thing is for sure, he did't come to this world for anything good. \n
+    In like manner to Eyeore, Sneakko is very skilled for getting into your computer undetected. \n
+    Once inside he will wait and wait, while collective bits of sensitive and personal data. \n
     .
   `,
   strength: 80,
   intelligence: 60,
   stamina: 100,
-  healthpoints: 800,
+  healthpoints: 200,
   mana: 0,
   agility: 20,
   speed: 40,
@@ -62,13 +62,13 @@ const SNEAKKO = {
   weakness: 'Water' as TElement,
   skills: [
     {
-      name: 'Plasma beam',
+      name: 'Passwords saved and unsafe now',
       damage: 200,
       element: 'Plasma',
       description: 'Hurls a beam of plasma from his central core.'
     },
     {
-      name: 'Sneaky punch',
+      name: 'Buy a decryption key',
       damage: 25,
       element: 'Physical',
       description: 'Porcu spins right arm really fast as a decoy, then quickly punches with his left straight to the opponents face.'
@@ -79,7 +79,7 @@ const TRICKKERO = {
   name: 'Trickkero',
   imgUrl: 'http://localhost:8080/public/trickkero.jpg',
   description: `
-    .
+    A mix of anarchist and joker, trick or treat, is time to choose.
   `,
   backStory: `
     . \n
@@ -115,7 +115,7 @@ const TINY = {
   name: 'Tiny',
   imgUrl: 'http://localhost:8080/public/tiny.jpg',
   description: `
-    Using his swag and manipulation skills, dudeguy gains your trust, to get valuable personal information from you and missuse it.
+    Tiny is rather simple, but in it's simplicity, he can bring havoc.
   `,
   backStory: `
     . \n
@@ -151,10 +151,10 @@ const OVERLORDS = {
   name: 'Overlords',
   imgUrl: 'http://localhost:8080/public/overlords.jpg',
   description: `
-    Using his swag and manipulation skills, dudeguy gains your trust, to get valuable personal information from you and missuse it.
+    For some reason they got into rulling positions and they'll make sure to stay as long as they can.
   `,
   backStory: `
-    . \n
+    It might be thanks to a revolution or just thanks to overal dissapointment on current polititians and political correctness, but they are now in power and it might not be the best for you. \n
     . \n
     . \n
     .
