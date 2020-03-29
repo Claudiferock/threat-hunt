@@ -74,7 +74,6 @@ export const HeroIndex: React.FC<IHeroIndexProps> = () => {
 	}
 
 	console.log(heroes);
-/* 	console.log(threats); */
 
 	return (
 		<main>
@@ -107,13 +106,11 @@ export const HeroIndex: React.FC<IHeroIndexProps> = () => {
         		`}
 			/>
 
-			{/* <ThreatIndex/> */}
+			{/*  */}
 
-{/* 			<HeroCardContainer>
-				{threats.map(threat => (
-					<ThreatCard key={threat.name} {...threat} />
-				))}
-			</HeroCardContainer> */}
+			<HeroCardContainer>
+				<ThreatIndex/>
+			</HeroCardContainer>
 
 			<Footer />
 		</main>

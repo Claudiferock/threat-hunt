@@ -68,14 +68,13 @@ export const ThreatIndex: React.FC<IThreatIndexProps> = () => {
 		return handleLoading();
 	}
 
-/* 	console.log(heroes); */
 	console.log(threats);
 
 	return (
-    <HeroCardContainer>
+    <div>
       {threats.map(threat => (
         <ThreatCard key={threat.name} {...threat} />
       ))}
-    </HeroCardContainer>
+    </div>
 	);
 };
