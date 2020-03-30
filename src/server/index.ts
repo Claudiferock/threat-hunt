@@ -8,6 +8,7 @@ import * as TypeGraphQl from 'type-graphql'
 import { Hero } from './entities/hero'
 import { Threat } from './entities/threat'
 import { Skill } from './entities/skill'
+import { Attribute } from './entities/attribute'
 import { HeroResolver } from './resolvers/hero-resolver'
 import { ThreatResolver } from './resolvers/threat-resolver'
 
@@ -19,7 +20,7 @@ useContainer(Container)
 const databaseOptions: ConnectionOptions = {
   type: 'sqlite',
   database: `${path.resolve(__dirname, ".")}/data/db.sqlite`,
-  entities: [Hero, Threat, Skill],
+  entities: [Hero, Threat, Skill, Attribute],
   logging: false, // switch to 'all' or true to enable database query logging
 }
 

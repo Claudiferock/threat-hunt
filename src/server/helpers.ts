@@ -15,15 +15,17 @@ const EYEORE = {
     For some reason they are easy to miss, but absolutely noticeable once you learn to recognise them. \n
     .
   `,
-  strength: 10,
-  intelligence: 20,
-  stamina: 200,
   healthpoints: 40,
   mana: 200,
-  agility: 20,
-  speed: 40,
   resistance: 'Fire' as TElement,
   weakness: 'Water' as TElement,
+  attributes: [{
+    strength: 10,
+    intelligence: 20,
+    stamina: 200,
+    agility: 20,
+    speed: 40,
+  }],
   skills: [
     {
       name: 'Snoopy snoopy do',
@@ -51,15 +53,17 @@ const SNEAKKO = {
     Once inside he will wait and wait, while collective bits of sensitive and personal data. \n
     .
   `,
-  strength: 80,
-  intelligence: 60,
-  stamina: 100,
   healthpoints: 200,
   mana: 0,
-  agility: 20,
-  speed: 40,
   resistance: 'Fire' as TElement,
   weakness: 'Water' as TElement,
+  attributes: [{
+    strength: 20,
+    intelligence: 40,
+    stamina: 60,
+    agility: 80,
+    speed: 80,
+  }],
   skills: [
     {
       name: 'Passwords saved and unsafe now',
@@ -87,15 +91,17 @@ const TRICKKERO = {
     . \n
     .
   `,
-  strength: 80,
-  intelligence: 60,
-  stamina: 100,
   healthpoints: 800,
   mana: 0,
-  agility: 20,
-  speed: 40,
   resistance: 'Fire' as TElement,
   weakness: 'Water' as TElement,
+  attributes: [{
+    strength: 20,
+    intelligence: 40,
+    stamina: 60,
+    agility: 80,
+    speed: 80,
+  }],
   skills: [
     {
       name: 'Plasma beam',
@@ -123,15 +129,17 @@ const TINY = {
     . \n
     .
   `,
-  strength: 80,
-  intelligence: 60,
-  stamina: 100,
   healthpoints: 800,
   mana: 0,
-  agility: 20,
-  speed: 40,
   resistance: 'Fire' as TElement,
   weakness: 'Water' as TElement,
+  attributes: [{
+    strength: 20,
+    intelligence: 40,
+    stamina: 60,
+    agility: 80,
+    speed: 80,
+  }],
   skills: [
     {
       name: 'Plasma beam',
@@ -159,15 +167,17 @@ const OVERLORDS = {
     . \n
     .
   `,
-  strength: 80,
-  intelligence: 60,
-  stamina: 100,
   healthpoints: 800,
   mana: 0,
-  agility: 20,
-  speed: 40,
   resistance: 'Fire' as TElement,
   weakness: 'Water' as TElement,
+  attributes: [{
+    strength: 20,
+    intelligence: 40,
+    stamina: 60,
+    agility: 80,
+    speed: 80,
+  }],
   skills: [
     {
       name: 'Plasma beam',
@@ -195,15 +205,17 @@ const DUDEGUY = {
     . \n
     .
   `,
-  strength: 80,
-  intelligence: 60,
-  stamina: 100,
   healthpoints: 800,
   mana: 0,
-  agility: 20,
-  speed: 40,
   resistance: 'Fire' as TElement,
   weakness: 'Water' as TElement,
+  attributes: [{
+    strength: 20,
+    intelligence: 40,
+    stamina: 60,
+    agility: 80,
+    speed: 80,
+  }],
   skills: [
     {
       name: 'Plasma beam',
@@ -233,15 +245,17 @@ const PORCU = {
     Porcu barely managed to get away, but he wasn't able to save his fiancé. Next day he went back to the Reefs to recover his suit from his hideout. \n
     When he saw the destruction he vowed to have his revenge on his loved one and replenish world from evil.
   `,
-  strength: 80,
-  intelligence: 60,
-  stamina: 100,
   healthpoints: 800,
   mana: 0,
-  agility: 20,
-  speed: 40,
   resistance: 'Fire' as TElement,
   weakness: 'Water' as TElement,
+  attributes: [{
+    strength: 80,
+    intelligence: 60,
+    stamina: 100,
+    agility: 20,
+    speed: 40,
+  }],
   skills: [
     {
       name: 'Plasma beam',
@@ -268,17 +282,17 @@ const LISA = {
   backStory: `
     Coming from a wealthy family of McAllisters, Lisa had a joyful childhood. Though as the day went by at the helping her family with upkeeping the farm and raking leaves she found herself quite bored. She said that to her father. Being a huntsman and the head of the family, Joe McAllister decided to teach his daughter to shoot with a revolver. After that there was no coming back.
   `,
-  strength: 20,
-  intelligence: 40,
-  stamina: 60,
-  agility: 80,
-  speed: 80,
-
   healthpoints: 500,
   mana: 0,
-
   resistance: 'Air' as TElement,
   weakness: 'Fire' as TElement,
+  attributes: [{
+    strength: 20,
+    intelligence: 40,
+    stamina: 60,
+    agility: 80,
+    speed: 80,
+  }],
   skills: [
     {
       name: 'Dynamite',
@@ -311,17 +325,17 @@ const GIDEON = {
   backStory: `
     Gideon had always been bit of an oddball. He first noticed his psychic skills when he rescued a tiny kitten from getting squashed by a card. Little did he know of his future before awakening his powers, but at that point it seemed clear to him what he had to do. Couple years after the incident he joined the Hunters.
  `,
-  strength: 1,
-  intelligence: 99,
-  stamina: 20,
-  agility: 20,
-  speed: 40,
-
   healthpoints: 300,
   mana: 20000,
-
   resistance: 'Air' as TElement,
   weakness: 'Fire' as TElement,
+  attributes: [{
+    strength: 1,
+    intelligence: 99,
+    stamina: 20,
+    agility: 20,
+    speed: 40,
+  }],
   skills: [
     {
       name: 'Telekinesis',
@@ -335,7 +349,6 @@ const GIDEON = {
       element: 'Psychic',
       description: 'Shoots a psychic beam.'
     },
-
   ]
 }
 
