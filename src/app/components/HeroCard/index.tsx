@@ -31,7 +31,7 @@ flex-direction: column;
       transform: rotateZ(0deg);
       position: fixed;
       color: rgb(255,255,255);
-      text-shadow: rgba(252, 66, 123, .8) 2px 5px;
+      text-shadow: rgba(252, 66, 123, .7) 2px 5px;
       z-index:1;
       top: 0;
       transition: all 250ms ease-out;
@@ -39,7 +39,7 @@ flex-direction: column;
     img {
       width: 160px;
       -webkit-filter: drop-shadow(2px 8px 6px rgba(0,0,0,0.9));
-      border: .25rem solid rgb(252, 66, 123);
+      border: .2rem solid rgb(252, 66, 123);
       transition: all 200ms; 
     }
   }
@@ -63,7 +63,7 @@ flex-direction: column;
   flex-direction: row;
   align-items: center;
   height: 44vh;
-  padding: 10px;
+  padding: 8px;
   margin: 0 4vw;
   position: absolute;
   left: 0;
@@ -98,6 +98,18 @@ flex-direction: column;
     text-align: justify;
   }
 }
+.hero__strwkns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  p {
+    color: rgb(252, 66, 123);
+    font-size: 1rem;
+    span {
+      text-transform: uppercase;
+    }
+  }
+}
 `;
 
 interface IHeroCardProps {
@@ -106,9 +118,11 @@ interface IHeroCardProps {
   imgAvatarUrl: string;
   description: string;
   backStory: string;
+  resistance: string;
+  weakness: string;
 }
 
-export const HeroCard: React.FC<IHeroCardProps> = ({ name, imgUrl, imgAvatarUrl, description, backStory }) => {
+export const HeroCard: React.FC<IHeroCardProps> = ({ name, imgUrl, imgAvatarUrl, description, backStory, resistance, weakness }) => {
   return (
     <Container>
       <HeroesContainer>
@@ -118,6 +132,10 @@ export const HeroCard: React.FC<IHeroCardProps> = ({ name, imgUrl, imgAvatarUrl,
             <h2>{name}</h2>
             <p className="hero__description">{description}</p>
             <p>{backStory}</p>
+            <div className="hero__strwkns">
+              <p>Resistance <span>{resistance}</span></p>
+              <p>Weakness <span>{weakness}</span></p>
+            </div>
           </div>
 
         </div>

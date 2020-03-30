@@ -36,7 +36,8 @@ interface IThreatIndexProps {}
 interface IThreat {
   name: string;
   imgUrl: string;
-  // extend this to match query above
+  description: string;
+  backStory: string;
 }
 
 const handleLoading = () => <div>Loading...</div>;

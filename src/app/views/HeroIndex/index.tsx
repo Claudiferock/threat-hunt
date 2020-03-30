@@ -46,6 +46,8 @@ interface IHero {
   imgAvatarUrl: string;
   description: string;
   backStory: string;
+  resistance: string;
+  weakness: string;
 }
 
 const HeroCardContainer = styled.div`
