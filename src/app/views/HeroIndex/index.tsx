@@ -14,6 +14,7 @@ const HEROES_QUERY = gql`
 	query {
 		heroes {
 			name
+			imgAvatarUrl
 			imgUrl
 			description
 			backStory
@@ -40,6 +41,9 @@ interface IHeroIndexProps {}
 interface IHero {
   name: string;
   imgUrl: string;
+  imgAvatarUrl: string;
+  description: string;
+  backstory: string;
   // extend this to match query above
 }
 
@@ -56,7 +60,7 @@ const HeroCardContainer = styled.div`
 
 const handleLoading = () => <div>Loading...</div>;
 
-const handleError = (message: string) => <div>Error! {message}</div>;
+const handleError = (message: string) => <div><h3>Error! {message}</h3></div>;
 
 export const HeroIndex: React.FC<IHeroIndexProps> = () => {
 	const {
@@ -91,6 +95,19 @@ export const HeroIndex: React.FC<IHeroIndexProps> = () => {
 			/>
 
 			{/** Improve this section. Data provided is defined on top in GraphQL query. You can decide what you use and what you dont't.*/}
+			
+			<HeroCardContainer>
+				<div className="HeroDisplay active">
+					<img src="" alt=""/>
+				</div>
+				<div className="HeroDisplay">
+
+				</div>
+				<div className="HeroDisplay">
+
+				</div>
+			</HeroCardContainer>
+
 			<HeroCardContainer>
 				{heroes.map(hero => (
 					<HeroCard key={hero.name} {...hero} />
