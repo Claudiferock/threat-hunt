@@ -86,7 +86,7 @@ const TRICKKERO = {
     A mix of anarchist and joker, trick or treat, is time to choose.
   `,
   backStory: `
-    . \n
+    Story available in October. \n
     . \n
     . \n
     .
@@ -124,7 +124,7 @@ const TINY = {
     Tiny is rather simple, but in it's simplicity, he can bring havoc.
   `,
   backStory: `
-    . \n
+    The story is so small, that it doesn't really make up for a styory. \n
     . \n
     . \n
     .
@@ -200,7 +200,7 @@ const DUDEGUY = {
     Using his swag and manipulation skills, dudeguy gains your trust, to get valuable personal information from you and missuse it.
   `,
   backStory: `
-    . \n
+    Too much swag for a real story. \n
     . \n
     . \n
     .
