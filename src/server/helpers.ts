@@ -222,6 +222,7 @@ const DUDEGUY = {
 
 const PORCU = {
   name: 'Porcu',
+  imgAvatarUrl: 'http://localhost:8080/public/porcuAvatar.png',
   imgUrl: 'http://localhost:8080/public/porcu.png',
   description: `
     Using his wit and engineering skills, Porcu has created an awesome suit which shoots Plasma lazers and uses immense strength to overcome his opponents. He is pretty slow though and his suit has weaknesses.
@@ -259,6 +260,7 @@ const PORCU = {
 
 const LISA = {
   name: 'Lisa McAllister',
+  imgAvatarUrl: 'http://localhost:8080/public/lisaAvatar.png',
   imgUrl: 'http://localhost:8080/public/lisa.png',
   description: `
     With her beloved revolver called React and super-human precision, Lisa can shoot a target from a mile away. She also carries a stack of dynamites and a lasso.
@@ -301,6 +303,7 @@ const LISA = {
 
 const GIDEON = {
   name: 'Gideon',
+  imgAvatarUrl: 'http://localhost:8080/public/gideonAvatar.png',
   imgUrl: 'http://localhost:8080/public/gideon.png',
   description: `
     Laptop that he carries with him amplifies and channels his already enormous powers. Even though he might look soft and calm, there is raging power swirling inside him. One should not get in his way.

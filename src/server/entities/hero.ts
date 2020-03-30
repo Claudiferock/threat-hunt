@@ -18,6 +18,10 @@ export class Hero {
 
   @Field()
   @Column()
+  imgAvatarUrl: string
+
+  @Field()
+  @Column()
   imgUrl: string
 
   @Field()
