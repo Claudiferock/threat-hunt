@@ -11,15 +11,17 @@ const THREATS_QUERY = gql`
 			imgUrl
 			description
 			backStory
-			strength
-			intelligence
-			stamina
 			healthpoints
 			mana
-			agility
-			speed
 			resistance
 			weakness
+			attributes {
+				strength
+				intelligence
+				stamina
+				agility
+				speed
+			}
 			skills {
 				name
 				damage

@@ -1,5 +1,3 @@
-// It is your job to implement this. More info in README
-
 import * as React from 'react'
 
 import styled from "styled-components"
@@ -10,72 +8,124 @@ justify-content: scpace-evenly;
 flex-wrap: wrap;
 `;
 
-const DisplayHeroContainer = styled.div`
-display: flex;
-flex-direction: row;
-width: 100%;
-h3 {
-  font-size: 1.6rem;
-  transform: rotateZ(90deg);
-  text-align: left;
-  width:160px;
-  margin-right:-20px;
-}
-img {
-  border-radius: 1px;
-  height: 320px;
-}
-`;
 const HeroesContainer = styled.div`
 display: flex;
-flex-direction: row;
-width: calc((90vw/3));
--webkit-filter: grayscale(.9);
+flex-direction: column;
 &:hover {
-  flex-direction: column;
-  align-items: center;
-  -webkit-filter: grayscale(0);
-  h2{
-    transform: rotateZ(0deg);
-    position: fixed;
-    color: rgb(255,255,255);
-    text-shadow: rgba(252, 66, 123, .8) 2px 5px;
-    z-index:1;
-    top: 0;
-    transition: all 250ms ease-out;
+  .hero__display {
+    transition: all 300ms ease-out;
+    visibility: visible;
+    -webkit-filter: grayscale(0);
+  }
+}
+.heroes {
+  display:flex;
+  flex-direction: row;
+  margin-top: 50vh;
+  width: calc((90vw/3));
+  &:hover {
+    flex-direction: column;
+    align-items: center;
+    -webkit-filter: grayscale(0);
+    h2{
+      transform: rotateZ(0deg);
+      position: fixed;
+      color: rgb(255,255,255);
+      text-shadow: rgba(252, 66, 123, .8) 2px 5px;
+      z-index:1;
+      top: 0;
+      transition: all 250ms ease-out;
+    }
+    img {
+      width: 160px;
+      -webkit-filter: drop-shadow(2px 8px 6px rgba(0,0,0,0.9));
+      border: .25rem solid rgb(252, 66, 123);
+      transition: all 200ms; 
+    }
+  }
+  h2 {
+    transition: all 200ms ease-in;
+    font-size: 1.6rem;
+    transform: rotateZ(90deg);
+    text-align: left;
+    width:160px;
+    margin-right:-20px;
   }
   img {
-    width: 160px;
-    -webkit-filter: drop-shadow(2px 8px 6px rgba(0,0,0,0.9));
-    border: .25rem solid rgb(252, 66, 123);
-    transition: all 200ms; 
+    border-radius: 20px;
+    height: 160px;
+    -webkit-filter: grayscale(.9);
   }
 }
-h2 {
-  transition: all 200ms ease-in;
-  font-size: 1.6rem;
-  transform: rotateZ(90deg);
-  text-align: left;
-  width:160px;
-  margin-right:-20px;
+.hero__display {
+  transition: all 300ms ease-in;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  height: 44vh;
+  padding: 10px;
+  margin: 0 4vw;
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+  -webkit-filter: grayscale(1);
+  background-color: rgb(18, 23, 48);
+  border-radius: 10px;
+  img {
+    border-radius: 3px;
+    height: 40vh;
+  }
 }
-img {
-  border-radius: 5px;
-  height: 160px;
+.hero__information {
+
+  font-family: 'Montserrat';
+  padding: 0 20px;
+  color:white;
+
+  h2 {
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 25px;
+    letter-spacing: 1.15px;
+    color: rgb(252, 66, 123);
+  }
+  p {
+    font-weight: 500;
+    letter-spacing: 0.65px;
+    line-height: 24px;
+    font-size: .8rem;
+    color:white;
+    text-align: justify;
+  }
 }
 `;
 
 interface IHeroCardProps {
   name: string,
+  imgUrl: string;
   imgAvatarUrl: string;
+  description: string;
+  backStory: string;
 }
 
-export const HeroCard: React.FC<IHeroCardProps> = ({ name, imgAvatarUrl }) => {
+export const HeroCard: React.FC<IHeroCardProps> = ({ name, imgUrl, imgAvatarUrl, description, backStory }) => {
   return (
     <Container>
       <HeroesContainer>
-        <h2 className="sc-htoDjs fqwlwq">{name}</h2>
-        <img src={imgAvatarUrl} alt="hero avatar image"/>
+        <div className="hero__display">
+          <img src={imgUrl} alt="hero's image"/>
+          <div className="hero__information">
+            <h2>{name}</h2>
+            <p className="hero__description">{description}</p>
+            <p>{backStory}</p>
+          </div>
+
+        </div>
+        <div className="heroes">
+          <h2 className="sc-htoDjs fqwlwq">{name}</h2>
+          <img src={imgAvatarUrl} alt="hero avatar image"/>
+        </div>
+
       </HeroesContainer>
     </Container>
   )

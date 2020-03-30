@@ -18,15 +18,17 @@ const HEROES_QUERY = gql`
 			imgUrl
 			description
 			backStory
-			strength
-			intelligence
-			stamina
 			healthpoints
 			mana
-			agility
-			speed
 			resistance
 			weakness
+			attributes {
+				strength
+				intelligence
+				stamina
+				agility
+				speed
+			}
 			skills {
 				name
 				damage
@@ -43,11 +45,21 @@ interface IHero {
   imgUrl: string;
   imgAvatarUrl: string;
   description: string;
-  backstory: string;
-  // extend this to match query above
+  backStory: string;
 }
 
 const HeroCardContainer = styled.div`
+	display: flex;
+	padding: 0 2%;
+	align-self: center;
+	max-width: 1150px;
+	@media (min-width: 1400px) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+`;
+
+const ThreatCardContainer = styled.div`
 	display: flex;
 	padding: 0 2%;
 	align-self: center;
@@ -94,20 +106,6 @@ export const HeroIndex: React.FC<IHeroIndexProps> = () => {
         		`}
 			/>
 
-			{/** Improve this section. Data provided is defined on top in GraphQL query. You can decide what you use and what you dont't.*/}
-			
-			<HeroCardContainer>
-				<div className="HeroDisplay active">
-					<img src="" alt=""/>
-				</div>
-				<div className="HeroDisplay">
-
-				</div>
-				<div className="HeroDisplay">
-
-				</div>
-			</HeroCardContainer>
-
 			<HeroCardContainer>
 				{heroes.map(hero => (
 					<HeroCard key={hero.name} {...hero} />
@@ -123,11 +121,10 @@ export const HeroIndex: React.FC<IHeroIndexProps> = () => {
         		`}
 			/>
 
-			{/*  */}
 
-			<HeroCardContainer>
+			<ThreatCardContainer>
 				<ThreatIndex/>
-			</HeroCardContainer>
+			</ThreatCardContainer>
 
 			<Footer />
 		</main>
