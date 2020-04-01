@@ -2,7 +2,7 @@
 
 The goal of this application is to become a gamified experience to increase CyberSecurity awareness. The backbone was provided by Hoxhunt as part of their assignment for summer 2020, in which they created a GraphQL API and a simple React application that queries infromation from that API. My job was finalize this application.
 
-<a href="https://raw.githubusercontent.com/Claudiferock/threat-hunt/master/public/threatHunt.gif"><img src="https://raw.githubusercontent.com/Claudiferock/threat-hunt/master/public/threatHunt.gif" alt="Gif of the app's opening" width="720"/></a>  
+<a href="https://raw.githubusercontent.com/Claudiferock/summer-hunters-home-assignment/master/public/threatHunt.gif"><img src="https://raw.githubusercontent.com/Claudiferock/summer-hunters-home-assignment/master/public/threatHunt.gif" alt="Gif of the app's opening" width="720"/></a>  
 
 # Good to know
 Application is written in Typescript.
