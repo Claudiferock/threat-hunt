@@ -23,6 +23,7 @@ const Image = styled.div`
 		min-height: 500px;
 	}
 	animation: filter-animation 250ms 3;
+	animation-delay: .6s;
 	@keyframes filter-animation {
 		0% {
 			-webkit-filter: saturate(2);
