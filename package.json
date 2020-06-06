@@ -18,7 +18,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"apollo-boost": "^0.3.1",
-		"apollo-server": "^2.4.8",
+		"apollo-server": "^2.14.2",
 		"graphql": "^14.1.1",
 		"graphql-tag": "^2.10.1",
 		"react-apollo-hooks": "^0.4.3",
