@@ -138,8 +138,8 @@ export const HeroCard: React.FC<IHeroCardProps> = ({ name, imgUrl, imgAvatarUrl,
               <p>Weakness <span>{weakness}</span></p>
             </div>
           </div>
-
         </div>
+        
         <div className="heroes">
           <h2 className="sc-htoDjs fqwlwq">{name}</h2>
           <img src={imgAvatarUrl} alt="hero avatar image"/>

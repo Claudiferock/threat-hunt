@@ -38,6 +38,8 @@ interface IThreat {
   imgUrl: string;
   description: string;
   backStory: string;
+  resistance: string;
+  weakness: string;
 }
 
 const handleLoading = () => <div>Loading...</div>;

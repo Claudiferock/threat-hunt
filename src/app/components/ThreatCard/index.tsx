@@ -11,6 +11,13 @@ font-family: 'Montserrat';
 background: rgb(0, 17, 71);
 border-radius: 6px;
 margin: 20px 0;
+&:hover {
+  .threat__display {
+    transition: all 300ms ease-out;
+    visibility: visible;
+    -webkit-filter: grayscale(0);
+  }
+}
 `;
 
 const MainCard = styled.section`
@@ -24,6 +31,26 @@ border-radius: 6px;
 margin: 20px 0;
 img {
   width: 60%;
+}
+
+.threat__display {
+  transition: all 300ms ease-in;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  height: 44vh;
+  padding: 8px;
+  margin: 0 4vw;
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+  -webkit-filter: grayscale(1);
+  background-color: rgb(18, 23, 48);
+  border-radius: 10px;
+  img {
+    border-radius: 3px;
+    height: 40vh;
+  }
 }
 `;
 
@@ -65,26 +92,30 @@ interface IThreatCardProps {
   imgUrl: string;
   description: string;
   backStory: string;
+  resistance: string;
+  weakness: string;
 }
 
-export const ThreatCard: React.FC<IThreatCardProps> = ({ name, imgUrl, description, backStory}) => {
+export const ThreatCard: React.FC<IThreatCardProps> = ({ name, imgUrl, description, backStory, resistance, weakness }) => {
   return (
     <>
-    
-    <MainCard>
-    <div className="threat__display">
-      <h2>{name}</h2>
-      <img src={imgUrl} alt="Threat image"/>
-    </div>
-    <div className="threat__information">
-      <p>Description: {description}</p>
-      <p>Background Story: {backStory}</p>
-      {/* <p>Resistance <span>{resistance}</span></p> */}
-      {/* <p>Weakness <span>{weakness}</span></p> */}
-    </div>
-  </MainCard>
     <Container>
-
+      <MainCard>
+        <main className="threat__display">
+          <section className="threat__img">
+            <h2>{name}</h2>
+            <img src={imgUrl} alt="Threat image"/>
+          </section>
+          <section className="threat__information">
+            <p>Description: {description}</p>
+            <p>Background Story: {backStory}</p>
+            <div className="hero__strwkns">
+              <p>Resistance <span>{resistance}</span></p>
+              <p>Weakness <span>{weakness}</span></p>
+            </div>
+          </section>
+        </main>
+      </MainCard>
       <InnerContainer>
         <div className="threat__display">
           <h2>{name}</h2>
