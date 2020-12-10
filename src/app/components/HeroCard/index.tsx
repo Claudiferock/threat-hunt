@@ -54,6 +54,7 @@ flex-direction: column;
   img {
     border-radius: 20px;
     height: 160px;
+    border: .2rem solid transparent;
     -webkit-filter: grayscale(.9);
   }
 }

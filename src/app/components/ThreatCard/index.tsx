@@ -8,9 +8,23 @@ flex-direction: row;
 justify-content: scpace-evenly; 
 flex-wrap: wrap;
 font-family: 'Montserrat';
-background: rgb(18, 23, 48);
+background: rgb(0, 17, 71);
 border-radius: 6px;
 margin: 20px 0;
+`;
+
+const MainCard = styled.section`
+display: flex;
+flex-direction: row;
+justify-content: scpace-evenly; 
+flex-wrap: wrap;
+font-family: 'Montserrat';
+background: rgb(0, 17, 71);
+border-radius: 6px;
+margin: 20px 0;
+img {
+  width: 60%;
+}
 `;
 
 const InnerContainer = styled.div`
@@ -55,7 +69,22 @@ interface IThreatCardProps {
 
 export const ThreatCard: React.FC<IThreatCardProps> = ({ name, imgUrl, description, backStory}) => {
   return (
+    <>
+    
+    <MainCard>
+    <div className="threat__display">
+      <h2>{name}</h2>
+      <img src={imgUrl} alt="Threat image"/>
+    </div>
+    <div className="threat__information">
+      <p>Description: {description}</p>
+      <p>Background Story: {backStory}</p>
+      {/* <p>Resistance <span>{resistance}</span></p> */}
+      {/* <p>Weakness <span>{weakness}</span></p> */}
+    </div>
+  </MainCard>
     <Container>
+
       <InnerContainer>
         <div className="threat__display">
           <h2>{name}</h2>
@@ -67,5 +96,6 @@ export const ThreatCard: React.FC<IThreatCardProps> = ({ name, imgUrl, descripti
         </div>
       </InnerContainer>
     </Container>
+    </>
   )
 }
